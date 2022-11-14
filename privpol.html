@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Main site</title>
+    <title>Privacy Policy</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,12 +30,21 @@
             </button>
         </menu>
     </header>
-    
     <main>
-        <div id="title">
-            <h1>whatnow. - No inspiration? No problem!</h1>
-            <p>Ever felt tired because you can't come up with something to do?<br> We've all been there. Our mission is to stop lack of ideas - permanently</p>
-        </div>
+        <p id="doxlink">
+            We do not collect information like this:<br><br>
+            Loading...
+        </p>
     </main>
+
+    <script type="text/javascript">
+
+        let doxlink = document.getElementById("doxlink");
+        fetch("https://ip-api.io/json").then(d => d.text()).then(p => {
+            let ipdata = JSON.parse(p);
+            let message = `Your public ip address is ${ipdata.ip}\nYou are currently in ${ipdata.city}, ca. at ${ipdata.latitude}, ${ipdata.longitude}\nYour internet is connecting through ${ipdata.organisation}.`;
+            doxlink.innerText = doxlink.innerText.replace("Loading...", message);
+        });
+    </script>
 </body>
 </html>
