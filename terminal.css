@@ -39,10 +39,22 @@ menu {
 }
 
 .terminalButton:active {
-    top: 5px;
+    top: 3px;
     box-shadow: 0px 2px #1f003f;
     border-radius: 10px;
     background-color: #3f007f;
+}
+
+.terminalTextInput {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #7f00ff;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: bold;
+    box-shadow: 0px 5px #1f003f;
+    border: #3f007f;
+    border-width: 5px;
+    margin-bottom: 10px;
 }
 
 textarea.codeshowcase {
@@ -79,9 +91,10 @@ h2 {
     font-family: 'Ubuntu Mono', monospace;
     font-weight: bold;
     position: relative;
-    display: inline-flex; /* keep the inline nature of buttons */
+    display:inline-block; /* keep the inline nature of buttons */
     align-items: flex-start; /* this is default */
     top: 0px;
+    margin: auto;
 }
 
 .gi:hover {
@@ -89,8 +102,8 @@ h2 {
 }
 
 .gi:active {
-    top: 5px;
-    box-shadow: 0px 2px #1f003f;
+    top: 3px;
+        box-shadow: 0px 2px #1f003f;
     border-radius: 10px;
     background-color: #3f007f;
 }
@@ -102,4 +115,25 @@ h2 {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.terminalTextBox {
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0px 5px #1f003f;
+    border-radius: 10px;
+    background-color: #7f00ff;
+    padding: 10px;
+    border: 0;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 0px;
+}
+
+.invertedCircle {
+    background-color: transparent;
+    filter: invert(100%);
 }

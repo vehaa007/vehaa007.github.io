@@ -93,7 +93,7 @@ setInterval(() => {
         let canvas = renderCanvas[i];
         let ctx = canvas.getContext("2d");
         ctx.fillStyle = "#1f003f";
-        ctx.fillRect(0,0,500,500)
+        ctx.fillRect(0,0,canvas.width,canvas.height)
         projectedWF = [];
         wireframe.forEach(element => {
             let vertex = projectvertex(rotatevertex(element, frames/100, 2), canvas);
