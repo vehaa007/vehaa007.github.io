@@ -52,7 +52,8 @@ menu {
     font-family: 'Ubuntu Mono', monospace;
     font-weight: bold;
     box-shadow: 0px 5px #1f003f;
-    border: 2px #3f007f;
+    border: #3f007f;
+    border-width: 5px;
     margin-bottom: 10px;
 }
 
@@ -93,6 +94,7 @@ h2 {
     display:inline-block; /* keep the inline nature of buttons */
     align-items: flex-start; /* this is default */
     top: 0px;
+    margin: auto;
 }
 
 .gi:hover {
